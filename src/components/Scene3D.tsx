@@ -81,7 +81,8 @@ async function loadTTFAsTypefaceJSON(ttfUrl: string): Promise<any> {
   // Pôvodný TTFLoader používal 100000/(upm*72) čo nafúklo text o 100/72 = 1.389×
   const scale = 1000 / (font.unitsPerEm || 2048);
 
-  const glyphIndexMap = font.encoding.cmap.glyphIndexMap;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const glyphIndexMap = (font.encoding as any).cmap?.glyphIndexMap ?? (font as any).encoding?.cmap?.glyphIndexMap ?? {};
   const unicodes = Object.keys(glyphIndexMap);
 
   for (let i = 0; i < unicodes.length; i++) {

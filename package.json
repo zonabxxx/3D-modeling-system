@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack -p 3001",
     "dev:all": "stl-generator/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --app-dir stl-generator & next dev --turbopack -p 3001",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p ${PORT:-3001}",
     "lint": "next lint",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
