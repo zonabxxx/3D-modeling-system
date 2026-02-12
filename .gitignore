@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+stl-generator/venv/
+
+# Next.js build
+.next/
+out/
+
+# Environment variables (contain API keys!)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+
+# Generated STL files
+stl-generator/output/
+stl-generator/tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+*.log
+.vercel

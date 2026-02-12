@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  stl-generator:
+    build: .
+    container_name: adsun-stl-generator
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./app:/app/app       # Hot reload počas vývoja
+      - ./fonts:/app/fonts   # Fonty
+      - ./output:/app/output # Vygenerované STL + 3MF súbory
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STL_OUTPUT_DIR=/app/output
+      # Bambu Lab (voliteľné – pre priamu tlač cez LAN)
+      - BAMBU_PRINTER_IP=${BAMBU_PRINTER_IP:-}
+      - BAMBU_ACCESS_CODE=${BAMBU_ACCESS_CODE:-}
+      - BAMBU_SERIAL=${BAMBU_SERIAL:-}
+      - BAMBU_MODEL=${BAMBU_MODEL:-x1c}
+    # Sieťový prístup na Bambu Lab tlačiareň (MQTT:8883, FTP:990)
+    network_mode: host
+    restart: unless-stopped

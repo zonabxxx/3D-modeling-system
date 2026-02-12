@@ -1,0 +1,15 @@
+# CadQuery STL Generator - dependencies
+cadquery==2.4.0
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+fonttools==4.55.3
+numpy==1.26.4
+Pillow
+shapely==11.1.0
+svgpathtools==1.6.1
+aiofiles==24.1.0
+paho-mqtt==2.1.0
+qrcode==8.0
+trimesh
+networkx
