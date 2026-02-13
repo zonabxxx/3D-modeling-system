@@ -1,0 +1,20 @@
+---
+// Hlavná stránka konfigurátora V2 (Astro + React island)
+import ConfiguratorApp from '@/components/ConfiguratorApp';
+import '@/styles/global.css';
+---
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Konfigurátor V2 — Svetelné reklamy</title>
+  <meta name="description" content="Navrhnite si 3D svetelný nápis na mieru priamo na fotke vašej fasády." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <ConfiguratorApp client:only="react" />
+</body>
+</html>

@@ -26,20 +26,27 @@ export default function HomePage() {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <Link
-            href="/configurator"
+          <a
+            href="http://localhost:4321"
+            target="_blank"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl btn-orange text-lg animate-pulse-orange"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
             </svg>
-            Začať konfiguráciu
+            Dizajnér V2 (Astro)
+          </a>
+          <Link
+            href="/configurator"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#333] text-slate-400 hover:text-white hover:border-[#f59e0b] transition-colors"
+          >
+            🧊 Klasický konfigurátor
           </Link>
           <Link
             href="/settings"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#333] text-slate-400 hover:text-white hover:border-[#f59e0b] transition-colors"
           >
-            ⚙️ Výrobné nastavenia
+            ⚙️ Nastavenia
           </Link>
         </div>
       </div>

@@ -5,7 +5,7 @@ services:
     build: .
     container_name: adsun-stl-generator
     ports:
-      - "8100:8100"
+      - "8000:8000"
     volumes:
       - ./app:/app/app       # Hot reload počas vývoja
       - ./fonts:/app/fonts   # Fonty
